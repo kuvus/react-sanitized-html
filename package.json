@@ -1,53 +1,53 @@
 {
-  "name": "react-sanitized-html",
-  "version": "2.0.1-0",
-  "description": "A React component that will sanitize user-inputted HTML code, using the popular sanitize-html package",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "files": [
-    "lib/*"
-  ],
-  "scripts": {
-    "build": "babel ./src --out-dir ./lib --source-maps",
-    "prepare": "rimraf lib && npm run build",
-    "test": "jest",
-    "watch": "npm run build -- --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/compulim/react-sanitized-html.git"
-  },
-  "keywords": [
-    "sanitize",
-    "sanitizer",
-    "react",
-    "clean"
-  ],
-  "author": "William Wong <compulim@hotmail.com> (https://github.com/compulim)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/compulim/react-sanitized-html/issues"
-  },
-  "homepage": "https://github.com/compulim/react-sanitized-html#readme",
-  "peerDependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "sanitize-html": "^1.16.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
-    "jest": "^23.6.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.2.0",
-    "rimraf": "^2.6.2",
-    "sanitize-html": "^1.16.1"
-  }
+    "name": "react-sanitized-html",
+    "version": "2.0.1-0",
+    "description": "A React component that will sanitize user-inputted HTML code, using the popular sanitize-html package",
+    "main": "lib/index.js",
+    "module": "lib/index.js",
+    "files": [
+        "lib/*"
+    ],
+    "scripts": {
+        "build": "babel ./src --out-dir ./lib --source-maps",
+        "prepare": "rimraf lib && npm run build",
+        "test": "jest",
+        "watch": "npm run build -- --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/compulim/react-sanitized-html.git"
+    },
+    "keywords": [
+        "sanitize",
+        "sanitizer",
+        "react",
+        "clean"
+    ],
+    "author": "William Wong <compulim@hotmail.com> (https://github.com/compulim)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/compulim/react-sanitized-html/issues"
+    },
+    "homepage": "https://github.com/compulim/react-sanitized-html#readme",
+    "peerDependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^17.0.1",
+        "sanitize-html": "^2.3.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.12.10",
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+        "@babel/plugin-transform-runtime": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/preset-react": "^7.12.10",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-jest": "^26.6.3",
+        "jest": "^26.6.3",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "rimraf": "^3.0.2",
+        "sanitize-html": "^2.3.0"
+    }
 }
