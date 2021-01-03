@@ -30,6 +30,10 @@ const SanitizedHTML = props => {
     // TODO: Add memoization
     let sanitizedHTML = sanitizeHTML(props.html, sanitizerOptions)
 
+    // Replace multiple spaces with a single space
+    sanitizedHTML = sanitizedHTML.replace(/ +(?= )/g, '')
+
+    // Slice and add ellipsis
     sanitizedHTML =
         props.finalLength && sanitizedHTML.length > props.finalLength
             ? sanitizedHTML.slice(0, props.finalLength) + (props.ellipsis ? '...' : '')
