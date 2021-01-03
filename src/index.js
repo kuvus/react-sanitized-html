@@ -28,9 +28,12 @@ const SanitizedHTML = props => {
     }, {})
 
     // TODO: Add memoization
-    let sanitizedHTML = props.finalLength
-        ? sanitizeHTML(props.html, sanitizerOptions).slice(0, props.finalLength) + (props.ellipsis ? '...' : '')
-        : sanitizeHTML(props.html, sanitizerOptions)
+    let sanitizedHTML = sanitizeHTML(props.html, sanitizerOptions)
+
+    sanitizedHTML =
+        props.finalLength && sanitizedHTML.length > props.finalLength
+            ? sanitizedHTML.slice(0, props.finalLength) + (props.ellipsis ? '...' : '')
+            : sanitizedHTML
 
     return (
         <div
