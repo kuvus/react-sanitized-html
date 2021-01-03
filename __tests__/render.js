@@ -30,4 +30,17 @@ describe('SanitizedHTML', () => {
             )
         ).toBe('<div><a href="h</div>')
     })
+
+    test('should render only provided number of characters and add ellipsis', () => {
+        expect(
+            ReactDOMServer.renderToStaticMarkup(
+                <SanitizedHTML
+                    allowedTags={['a']}
+                    html={'<a href="http://bing.com/"><strong>Bing</strong></a>'}
+                    finalLength={10}
+                    ellipsis={true}
+                />
+            )
+        ).toBe('<div><a href="h...</div>')
+    })
 })

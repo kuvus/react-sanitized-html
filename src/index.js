@@ -29,7 +29,7 @@ const SanitizedHTML = props => {
 
     // TODO: Add memoization
     let sanitizedHTML = props.finalLength
-        ? sanitizeHTML(props.html, sanitizerOptions).slice(0, props.finalLength)
+        ? sanitizeHTML(props.html, sanitizerOptions).slice(0, props.finalLength) + (props.ellipsis ? '...' : '')
         : sanitizeHTML(props.html, sanitizerOptions)
 
     return (
@@ -65,6 +65,7 @@ SanitizedHTML.propTypes = {
     style: PropTypes.any,
 
     finalLength: PropTypes.number,
+    ellipsis: PropTypes.bool,
 }
 
 export default SanitizedHTML
